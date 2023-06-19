@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
-
+import CustomerPopup from './CustomerPopup'
+import OutputData from './OutputData';
 function App() {
+  const [outputName,setOutputName]=useState('')
+  const handleCustomerSelect = (customer) => {
+    console.log('Selected customer:', customer);
+    setOutputName(customer);
+    // Do something with the selected customer
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1>User Name Searching</h1>
+    <div className="output">
+    {outputName !=='' ? <OutputData outputName={outputName}/> :''}
+    </div>
+      <CustomerPopup onSelect={handleCustomerSelect} />
     </div>
   );
 }

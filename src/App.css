@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+.App{
+    /* border: 2px solid red; */
+    height: 100vh;
+    width: 100%;
+    background-color:lemonchiffon;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.output{
+    /* border: 2px solid blue; */
+    height: 30%;
+    width: 100%;
+    box-shadow: 2px 2px 5px black;
+    padding: 1rem 3rem;
+}
+.output .nameList{
+    /* border: 2px solid black; */
+    box-shadow: 1px 1px 3px black;
+    /* margin-top: 1rem; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+    /* background-color: aquamarine; */
+    
+}
+.customer-popup{
+    /* border: 2px solid green; */
+    height:60%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    
+    /* overflow: visible; */
+}
+.customer-popup .mapData{
+    padding-left: 3rem;
+
+    height: 90%;
+    width: 100%;
+    overflow-y: scroll;
+   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.customer-popup input{
+    height: 15%;
+    width: 60%;
+    padding-left:1rem;
+    font-size: 1.2rem;
+    background-color: lightblue;
+    margin-left: 1rem;
+    /* position: fixed; */
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li{
+    list-style-type: none;
 }
-
-.App-link {
-  color: #61dafb;
+.customer-popup .nameList{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: fit-content;
+   
+    /* align-items: end; */
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nameList h1{
+    border: 1px solid black;
+    padding: .5rem 1rem;
+    border-radius: 10px;
+}
+.nameList h2{
+    padding: 0 .6rem;
+    text-transform: capitalize;
+}
+.nameList p{
+    padding: 0 .2rem;
+    /* border: 2px solid green; */
+    height: 2.5rem;
+    display: flex;
+    align-items: end;
+    opacity: .6;
+    font-size: 1.2rem;
 }
